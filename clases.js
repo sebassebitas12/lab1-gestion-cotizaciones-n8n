@@ -260,7 +260,7 @@ class SolicitudCotizacion {
         producto: '',
         cantidad: cantidadExplicita,
         ambiguo: true,
-        motivoExtraccion: 'El correo menciona mÃ¡s de un producto y hace falta confirmar cuÃ¡l desea cotizar.'
+        motivoExtraccion: 'El correo menciona más de un producto y hace falta confirmar cuál desea cotizar.'
       };
     }
 
@@ -280,7 +280,7 @@ class SolicitudCotizacion {
           producto,
           cantidad: null,
           ambiguo: true,
-          motivoExtraccion: 'El correo contiene cantidades distintas; hace falta confirmar cuÃ¡ntas unidades desea.'
+          motivoExtraccion: 'El correo contiene cantidades distintas; hace falta confirmar cuántas unidades desea.'
         };
       }
       cantidad = valoresCantidad.length === 1 ? valoresCantidad[0] : null;
@@ -327,7 +327,7 @@ class SolicitudCotizacion {
     if (producto === null || producto === undefined) {
       return {
         estado: 'rechazada',
-        motivo: 'El producto solicitado no existe en el catÃ¡logo.'
+        motivo: 'El producto solicitado no existe en el catálogo.'
       };
     }
 
@@ -385,7 +385,7 @@ class HistorialTendencia {
     if (registros.length < 4) {
       return {
         ...base,
-        resumenTendencia: 'Se requieren 4 cotizaciones vÃ¡lidas del mismo producto para comparar dos periodos; hay ' + registros.length + '.'
+        resumenTendencia: 'Se requieren 4 cotizaciones válidas del mismo producto para comparar dos periodos; hay ' + registros.length + '.'
       };
     }
 
@@ -412,7 +412,7 @@ class HistorialTendencia {
       solicitudesAnalizadas: registros.length,
       resumenTendencia: 'Disponibilidad de ' + nombreProducto + ': ' +
         porcentajeAnterior + '% en las 2 cotizaciones anteriores y ' +
-        porcentajeReciente + '% en las 2 mÃ¡s recientes; tendencia ' +
+        porcentajeReciente + '% en las 2 más recientes; tendencia ' +
         estadoTendencia + '.'
     };
   }
